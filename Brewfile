@@ -12,12 +12,15 @@ brew "mise"
 brew "gnupg"
 brew "pinentry-mac"
 
-# AWS
-brew "awscli"
-
 # Docker
 brew "colima"
-brew "docker", link: false
+brew "docker"
 brew "docker-buildx"
 brew "docker-compose"
 brew "docker-credential-helper"
+
+# AI
+brew "agent-browser"
+
+# Utilities
+brew "cloc"
