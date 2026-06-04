@@ -16,4 +16,13 @@ brew bundle --file=Brewfile
 echo "Stowing starship..."
 stow --no-folding --restow --target "$HOME" starship
 
+echo "Linking docker-compose CLI plugin..."
+mkdir -p "$HOME/.docker/cli-plugins"
+ln -sfn "$(command -v docker-compose)" "$HOME/.docker/cli-plugins/docker-compose"
+
+echo "Starting colima if not running..."
+if ! colima status >/dev/null 2>&1; then
+  colima start
+fi
+
 echo "Done."
