@@ -29,6 +29,7 @@ echo "Updating ~/.zshrc..."
 zshrc="$HOME/.zshrc"
 ensure_zshrc_line() {
   if ! grep -qF "$1" "$zshrc" 2>/dev/null; then
+    printf '+ %s\n' "$1"
     printf '%s\n' "$1" >> "$zshrc"
   fi
 }
