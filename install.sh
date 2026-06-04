@@ -25,4 +25,17 @@ if ! colima status >/dev/null 2>&1; then
   colima start
 fi
 
+echo "Updating ~/.zshrc..."
+zshrc="$HOME/.zshrc"
+ensure_zshrc_line() {
+  if ! grep -qF "$1" "$zshrc" 2>/dev/null; then
+    printf '%s\n' "$1" >> "$zshrc"
+  fi
+}
+# shellcheck disable=SC2016
+ensure_zshrc_line 'eval "$(starship init zsh)"'
+# shellcheck disable=SC2016
+ensure_zshrc_line 'export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"'
+ensure_zshrc_line 'export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE="/var/run/docker.sock"'
+
 echo "Done."
