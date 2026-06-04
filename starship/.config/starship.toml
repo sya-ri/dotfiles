@@ -1,0 +1,28 @@
+git_branch = { symbol = "" }
+git_status = { disabled = true }
+java = { disabled = true }
+kotlin = { disabled = true }
+nodejs = { disabled = true }
+gradle = { disabled = true }
+python = { disabled = true }
+ruby = { disabled = true }
+rust = { disabled = true }
+golang = { disabled = true }
+php = { disabled = true }
+dotnet = { disabled = true }
+swift = { disabled = true }
+deno = { disabled = true }
+bun = { disabled = true }
+package = { disabled = true }
+docker_context = { disabled = true }
+aws = { disabled = true }
+gcloud = { disabled = true }
+azure = { disabled = true }
+terraform = { disabled = true }
+
+[custom.pr]
+command = "$HOME/.local/bin/starship-pr.sh"
+when = true
+format = "([#$output]($style))"
+style = "bold yellow"
+description = "PR number for current branch (cached, 30s TTL)"
