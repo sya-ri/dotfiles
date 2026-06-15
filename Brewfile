@@ -1,6 +1,7 @@
 # Shell
 brew "starship"
 brew "stow"
+brew "tmux"
 
 # GitHub
 brew "gh"

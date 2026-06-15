@@ -20,6 +20,10 @@ git clone git@github.com:sya-ri/dotfiles.git ~/dotfiles
 
 Requires the [`gh` CLI](https://cli.github.com) to be authenticated (`gh auth login`).
 
+### tmux
+
+- `~/.tmux.conf` — tmux config with `C-a` prefix, mouse support, vi copy mode, true color, and current-directory pane splits
+
 ## Usage
 
 ```sh
