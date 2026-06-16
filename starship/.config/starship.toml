@@ -19,10 +19,3 @@ aws = { disabled = true }
 gcloud = { disabled = true }
 azure = { disabled = true }
 terraform = { disabled = true }
-
-[custom.pr]
-command = "$HOME/.local/bin/starship-pr.sh"
-when = true
-format = "([#$output]($style))"
-style = "bold yellow"
-description = "PR number for current branch (cached, 30s TTL)"
