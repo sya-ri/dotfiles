@@ -16,9 +16,14 @@ git clone git@github.com:sya-ri/dotfiles.git ~/dotfiles
 ### starship
 
 - `~/.config/starship.toml` — [Starship](https://starship.rs) prompt config
+
 ### tmux
 
 - `~/.tmux.conf` — tmux config with `C-a` prefix, mouse support, vi copy mode, true color, and current-directory pane splits
+
+### zsh
+
+- `~/.config/dotfiles/zsh-init.zsh` — shared zsh initialization loaded from `~/.zshrc`
 
 ## Usage
 
@@ -26,4 +31,10 @@ git clone git@github.com:sya-ri/dotfiles.git ~/dotfiles
 stow <package>       # link files into $HOME
 stow -D <package>    # unlink
 stow -R <package>    # re-link
+```
+
+## Migrations
+
+```sh
+scripts/migrate-zshrc-to-loader.sh
 ```
